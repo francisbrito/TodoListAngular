@@ -1,0 +1,19 @@
+{
+  "name": "TodoListAngular",
+  "version": "0.0.0",
+  "description": "A simple demo application written \"the hard way\" to illustrate basic Angular.js concepts.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/francisbrito/TodoListAngular"
+  },
+  "keywords": [
+    "simple",
+    "demo",
+    "angular"
+  ],
+  "author": "Francis Brito <fr.br94@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/francisbrito/TodoListAngular/issues"
+  }
+}

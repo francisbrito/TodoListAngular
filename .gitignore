@@ -1,3 +1,4 @@
+# Node.js
 lib-cov
 *.seed
 *.log
@@ -13,3 +14,9 @@ results
 
 npm-debug.log
 node_modules
+
+# Bower
+bower_components
+
+# Custom
+app/vendor

@@ -19,10 +19,18 @@ module.exports = function (grunt) {
                     livereload: true
                 }
             }
+        },
+        bower: {
+            install: {
+                options: {
+                    layout: 'byComponent',
+                    targetDir: 'app/vendor',
+                }
+            }
         }
     });
 
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-    grunt.registerTask('default', ['connect:server', 'watch:livereload']);
+    grunt.registerTask('default', ['bower:install', 'connect:server', 'watch:livereload']);
 }

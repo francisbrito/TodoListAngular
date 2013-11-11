@@ -6,8 +6,34 @@
         <meta name="viewport" content="initial-scale=1.0,width=device-width">
         <meta name="author" content="Francis Brito">
         <script src="/vendor/angular/angular.js"></script>
+        <script src="/scripts/app.js"></script>
+        <style>
+        .tasks {
+            list-style: none;
+            padding: 0;
+        }
+        .task.task-done {
+            text-decoration: line-through;
+        }
+        </style>
     </head>
     <body>
-        <section class="page"></section>
+        <section class="page" ng-controller="TaskListCtrl">
+            <section class="content">
+                <form action="/add-todo" method="post" ng-submit="addTask()">
+                    <fieldset>
+                        <label for="task-description">Task</label>
+                        <input type="text" id="task-description" name="task-description" placeholder="e.g: Change the world" ng-model="newTask">
+                        <button type="submit">Add</button>
+                    </fieldset>
+                </form>
+                <ul class="tasks">
+                    <li class="task" ng-class="{'task-done': t.done }" ng-repeat="t in tasks">
+                        <input type="checkbox" ng-model="t.done">
+                        <span>{{t.description}}</span>
+                    </li>
+                </ul>
+            </section>
+        </section>
     </body>
 </html>

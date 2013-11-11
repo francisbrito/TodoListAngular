@@ -30,6 +30,6 @@ function TaskListCtrl ($scope) {
             done: false
         };
 
-        tasks.push(newTask);
+        $scope.tasks.push(newTask);
     }
 }

@@ -4,6 +4,7 @@
         "ecma5"
     ],
     "plugins": {
-        "node": {}
+        "node": {},
+        "angular": {}
     }
 }

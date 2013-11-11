@@ -20,7 +20,7 @@
     <body>
         <section class="page" ng-controller="TaskListCtrl">
             <section class="content">
-                <form action="/add-todo" method="post" ng-submit="addTask()">
+                <form ng-submit="addTask()">
                     <fieldset>
                         <label for="task-description">Task</label>
                         <input type="text" id="task-description" name="task-description" placeholder="e.g: Change the world" ng-model="newTask">
